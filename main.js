@@ -18,7 +18,7 @@
         c = 500;
     l.width = c, l.height = c;
     const s = l.getContext("2d");
-    s.font = "bold 30px Open Sans, sans-serif", s.textAlign = "center", s.textBaseline = "middle";
+    s.font = "bold 25px Open Sans, sans-serif", s.textAlign = "center", s.textBaseline = "middle";
     const u = new Image;
     u.setAttribute("crossorigin", "anonymous"), u.src = "https://images.unsplash.com/photo-1549068106-b024baf5062d?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80", u.onload = () => {
         ! function() {
