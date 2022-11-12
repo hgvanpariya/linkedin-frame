@@ -32,8 +32,8 @@
         const t = i.scale.value / 100;
         s.drawImage(u, a.value, o.value, u.width * t, u.height * t),
             function() {
-                // const t = s.createLinearGradient(250, 500, 250, 400);
                 const t = s.createLinearGradient(250, 500, 250, 400);
+                // const t = s.createLinearGradient(0, 0, 500, 500);
                 t.addColorStop(0, i.frameColor1.value + d(1)), t.addColorStop(.15, i.frameColor1.value + d(1)), t.addColorStop(.8, i.frameColor1.value + d(1)), t.addColorStop(.9, i.frameColor1.value + d(.4)), t.addColorStop(.95, i.frameColor1.value + d(.1)), t.addColorStop(1, "rgba(0,0,0,0"), s.fillStyle = t, s.fillRect(0, c, c, -500)
             }(),
             function() {
@@ -41,7 +41,7 @@
                 t.width = c, t.height = c;
                 const e = t.getContext("2d"),
                     n = i.scale.value / 100;
-                e.drawImage(u, a.value, o.value, u.width * n, u.height * n), e.globalCompositeOperation = "destination-in", e.beginPath(), e.ract(20, 20, 150, 100), e.closePath(), e.fill(), s.drawImage(t, 0, 0, 500, 500)
+                e.drawImage(u, a.value, o.value, u.width * n, u.height * n), e.globalCompositeOperation = "destination-in", e.beginPath(), e.rect(0, 0, 0, 500), e.closePath(), e.fill(), s.drawImage(t, 0, 0, 500, 500)
             }();
         let e = i.text.value || "#EXAMPLE";
         /[\u0590-\u05FF]/.test(e) && (e = e.split("").reverse().join("")),
@@ -50,15 +50,16 @@
                 const l = t.measureText(e).width,
                     r = i.textOffset.value / 100,
                     c = (m * l + r) ;
-                // t.rotate(c);
+                t.rotate(c);
                 const s = .86 * n,
                     u = -85e-5 * Math.PI;
                 for (const [o, a] of e.split("").entries()) {
                     const e = u * t.measureText(a).width;
-                    o && t.rotate(e), t.save(), t.translate(0, s), t.fillText(a, 0, 0), t.restore(), t.rotate(e)
+                    o && t.rotate(e), t.save(), t.translate(0, s), t.fillText(a, 200, 200), t.restore()
                 }
                 t.restore()
             }(s, e, 250, 250, 250)
+         s.fillText(e, 250, 450);
     }
     const m = 85e-5;
     const h = new FileReader;
