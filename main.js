@@ -32,8 +32,9 @@
         const t = i.scale.value / 100;
         s.drawImage(u, a.value, o.value, u.width * t, u.height * t),
             function() {
+                // const t = s.createLinearGradient(250, 500, 250, 400);
                 const t = s.createLinearGradient(250, 500, 250, 400);
-                t.addColorStop(0, i.frameColor1.value + d(1)), t.addColorStop(.15, i.frameColor1.value + d(1)), t.addColorStop(.8, i.frameColor2.value + d(1)), t.addColorStop(.9, i.frameColor2.value + d(.4)), t.addColorStop(.95, i.frameColor2.value + d(.1)), t.addColorStop(1, "rgba(0,0,0,0"), s.fillStyle = t, s.fillRect(0, c, c, -500)
+                t.addColorStop(0, i.frameColor1.value + d(1)), t.addColorStop(.15, i.frameColor1.value + d(1)), t.addColorStop(.8, i.frameColor1.value + d(1)), t.addColorStop(.9, i.frameColor1.value + d(.4)), t.addColorStop(.95, i.frameColor1.value + d(.1)), t.addColorStop(1, "rgba(0,0,0,0"), s.fillStyle = t, s.fillRect(0, c, c, -500)
             }(),
             function() {
                 const t = document.createElement("canvas");
@@ -48,8 +49,8 @@
                 t.fillStyle = i.textColor.value, t.save(), t.translate(o, a);
                 const l = t.measureText(e).width,
                     r = i.textOffset.value / 100,
-                    c = (m * l + r) * Math.PI;
-                t.rotate(c);
+                    c = (m * l + r) ;
+                // t.rotate(c);
                 const s = .86 * n,
                     u = -85e-5 * Math.PI;
                 for (const [o, a] of e.split("").entries()) {
